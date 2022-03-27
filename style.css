@@ -1,0 +1,866 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: black;
+    color: #fff;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+.max-width {
+    max-width: 1300px;
+    padding: 0 80px;
+    margin: auto;
+}
+
+
+/* navbar styling */
+
+.navbar {
+    /* background-color:   #14eddbe1;  */
+    /* #ed14e799; */
+    position: fixed;
+    width: 100%;
+    margin-top: 20px;
+    padding: 3px 0;
+    z-index: 999;
+    font-family: 'ubuntu', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.nav-link::before {
+    transition: 300ms;
+    height: 2px;
+    content: "";
+    position: absolute;
+    background-color: #14eddbe1; 
+}
+
+.nav-link-ltr::before {
+    width: 0%;
+    bottom: 1px;
+}
+
+.nav-link-ltr:hover::before {
+    width: 5%;
+}
+
+
+.navbar.sticky {
+    background-color: #14eddbe1;
+    padding: 15px 0;
+    margin-top: 0%;
+}
+
+.navbar .max-width {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    color: white;
+    font-size: 35px;
+    font-weight: 600;
+}
+
+.navbar .logo a span {
+    color: #14eddbe1;
+    transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+    color: white;
+}
+
+.navbar .menu li {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar .menu li a {
+    display: block;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+    color: #14eddbe1;
+}
+
+.navbar.sticky .menu li a:hover {
+    color: black;
+}
+
+
+
+
+/* menu btn styling */
+
+.menu-btn {
+    font-size: 23px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-up-btn{
+    position: fixed;
+    height: 45px;
+    width: 42px;
+    background: #14eddbe1;
+    right: 30px;
+    bottom:10px;
+    text-align: center;
+    line-height: 45px;
+    font-size: 20px;
+    z-index: 999;
+    color: #111;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.scroll-up-btn.show{
+    bottom:30px;
+    opacity: 1;
+    pointer-events: auto;
+}
+/* home styling starts here*/
+
+.home {
+    display: flex;
+    height: 100vh;
+    color: #fff;
+    font-family: 'ubuntu', sans-serif;
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.home .max-width {
+    margin: auto 0 auto 40px;
+}
+
+.home .home-content {
+    display: flex;
+    
+     align-items: center;
+     justify-content: space-between;
+}
+
+.home .home-content .text-1 {
+    font-size: 27px;
+}
+
+.home .home-content .text-2 {
+    font-size: 75px;
+    font-weight: 600;
+    margin-left: -3px;
+}
+
+.home .home-content .text-3 {
+    font-size: 32px;
+    margin: 5px 0;
+}
+
+.home .home-content .text-3 span {
+    color: #14eddbe1;
+    font-weight: 500;
+}
+
+.home .home-content a{
+    display: inline-block;
+    background:  #14eddbe1;
+    color: #111;
+    font-size: 20px;
+    padding: 8px 30px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #14eddbe1;
+    margin: 8px;
+    transition: all 0.3s ease;
+}
+
+.home .home-content a:hover{
+    color: #fff;
+    background: none;
+    box-shadow:-2px 3px 6px 0px aqua;
+}
+
+.home .home-content .right{
+    width: 40%; 
+    
+    
+}
+.home .home-content .right img{
+   width: 100%;
+  
+    
+} 
+
+ .home-content {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+/* all similar styling code */
+section{
+    padding: 100px 0;
+}
+
+.about , .edu ,.skills , .project ,.contact,footer{
+    font-family: 'poppins' ,sans-serif;
+    color: #fff;
+}
+
+.about .about-content , 
+.edu .edu-content ,
+.skills .skills-content ,
+.project .project-content ,
+.contact .contact-content{
+    display: flex;
+    flex-wrap: wrap; 
+     align-items: center;
+     justify-content: space-between;
+
+}
+
+section .title{
+    position: relative;
+    font-size: 40px;
+    font-weight: 500;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'ubuntu',sans-serif;
+    text-align: center;
+}
+
+section .title::before{
+    content:"";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #14eddbe1;
+    transform: translateX(-50%);
+}
+
+section .title::after{
+   
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    color: #fff;
+    font-size: 20px;
+  padding: 5px;
+    background:#111;
+    transform: translateX(-50%);
+}
+
+/* about section styling */
+
+.about .title::after{
+    content:" Who i am";
+}
+
+
+.about .about-content .left{
+    width: 45%;
+} 
+.about .about-content .left img{
+
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.about .about-content .right{
+    width: 55%;
+}
+
+.about .about-content .right .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.about .about-content .right .text span{
+    color: #14eddbe1;
+}
+
+.about .about-content .right p{
+text-align: justify;
+}
+
+.about .about-content .right a{
+    display: inline-block;
+    background:  #14eddbe1;
+    color: #111;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 6px  18px;
+    margin-top: 20px;
+    border-radius: 6px;
+    border: 2px solid #14eddbe1;
+    margin: 8px;
+    transition: all 0.3s ease;
+
+}
+
+.about .about-content .right a:hover{
+    color: #fff;
+    background: none;
+    box-shadow:-2px 3px 6px 0px aqua;
+}
+
+/* Education section styling */
+.edu .title::after{
+ content: " qualifications";
+}
+
+.edu .edu-content .card{
+    width: calc(33% - 20px);
+    height: 220px;
+    background: #39AEA9;
+    text-align: center;
+    border-radius: 15px;
+    padding: 23px 26px;
+    box-shadow: 3px 3px 8px 4px #28FFBF;
+    transition: all 0.3s ease;
+}
+
+.edu .edu-content .card .box{
+    transition: all 0.3s ease;
+}
+
+.edu .edu-content .card:hover{
+    background: #B8FFF9;
+}
+.edu .edu-content .card:hover .box{
+transform: scale(1.05);
+}
+.edu .edu-content .card i{
+    color: #111;
+    font-size: 30px;
+}
+.edu .edu-content .card .text{
+    font-size: 23px;
+    font-weight: 500;
+    color: #111;
+    margin: 10px 0 7px 0;
+}
+
+.edu .edu-content .card:hover p{
+    color: #111;
+    font-weight: 400;
+}
+
+/* skills section styling starts here */
+
+.skills .title::after{
+    content: "what i know";
+}
+
+.skills .skills-content .column{
+    width: calc(50% - 30px);
+}
+
+.skills .skills-content .left .text{
+    font-size: 25px;
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+.skills .skills-content .left p{
+    text-align: justify;
+}
+.skills .skills-content .left .bars{
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+.skills .skills-content .right{
+    margin-top: 55px;
+}
+.skills .skills-content .right .bars{
+    margin-bottom: 15px;
+    margin-top: 17px;
+}
+ .skills-content .left .bars .line{
+     transform-origin: left;
+transform: scaleX(0);
+animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+ .skills-content .right .bars .line{
+     transform-origin: left;
+transform: scaleX(0);
+animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.skills .skills-content .left .info{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .right .info{
+    display: flex;    
+    align-items: center;
+    justify-content: space-between;
+}
+.skills .skills-content .left span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills .skills-content .right span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.skills .skills-content .left .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+    transition: .9s;
+}
+.skills .skills-content .right .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+    transition: .9s;
+}
+.skills-content .left .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #B8405E;
+
+}
+.skills-content .right .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: #B8405E;
+
+}
+/* creative skills */
+.skills-content .left .html::before{
+    width: 90%;
+}
+.skills-content .left .css::before{
+width: 80%;
+}
+.skills-content .left .bootstrap::before{
+width: 75%;
+}
+.skills-content .right .js::before{
+width: 50%;
+}
+.skills-content .right .php::before{
+width: 60%;
+}
+.skills-content .right .sql::before{
+width: 75%;
+}
+/* languages */
+.skills-content .left .py::before{
+width: 70%;
+}
+.skills-content .left .clang::before{
+width: 75%;
+}
+.skills-content .right .cpp::before{
+width: 65%;
+}
+.skills-content .right .java::before{
+width: 40%;
+}
+
+
+/* projects area styling starts here */
+.project .title::after{
+    content:"My work";
+}
+
+.project .project-content  {
+  display: flex;
+ flex-wrap: wrap;
+ gap: 1.5rem;
+ 
+}
+
+.project .project-content .box-1{
+    display: flex;
+    overflow: hidden;
+    flex: 1 1 30rem;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #14eddbe1;
+    padding: 40px;
+
+}
+.project .project-content .box-1:hover{
+    background: #05595B;
+
+    transition: all 0.8s ease;
+    border:3px solid rgb(0, 2, 94);
+}
+
+.project .project-content .box-1 a:hover{
+    background: #111;
+    color: #fff;
+}
+.project-content .box-1 .pic{
+  width: calc(100% - 100px);
+  padding:  30px;
+  margin: 0;
+
+}
+
+.project-content .box-1 .pic img{
+    width: 100%;
+ 
+}
+.project-content .box-1 .desc h3{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.project-content .box-1 .desc{
+    float: right;
+    margin-left: 30px; 
+    text-align: justify;
+  
+}
+.project-content .box-1 .desc p{
+    margin-bottom: 10px;
+}
+.project-content .box-1 .desc a{
+    background:  #14eddbe1;
+    color: #111;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 5px;
+    margin-top: 50px;
+    border-radius: 6px;
+    border: 2px solid #14eddbe1;
+    transition: all 0.3s ease;
+}
+
+.project-content .box-1 .desc a:hover{
+    background: #111;
+    color: #fff;
+    box-shadow:-2px 3px 6px 0px aqua;
+}
+/* contact section styling starts here */
+.contact .title::after{
+    content:"get in touch";
+}
+
+.contact .contact-content .column{
+    width: calc(50% - 30px);
+}
+.contact .contact-content .text{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+
+}
+
+.contact .contact-content .left p{
+    text-align: justify;
+}
+.contact .contact-content .left .icons{
+    margin: 10px 0;
+
+}
+
+.contact .contact-content .row{
+    display: flex;
+align-items: center;
+height: 70px;
+}
+
+
+.contact .contact-content .row .info{
+    margin-left: 30px;
+}
+
+.contact .contact-content .row i{
+    font-size: 25px;
+    color: #28FFBF;
+}
+.contact .contact-content .info .head{
+font-weight: 500;
+}
+
+.contact .contact-content .info .subtitle{
+color: #FFE4C0;
+}
+
+.contact .right form .fields{
+    display: flex;
+}
+.contact .right form #textarea{
+    height: 80px;
+    width: 100%;
+}
+
+.contact .right form .name{
+    margin-right: 10px;
+}
+.contact .right form .email{
+    margin-left: 10px;
+}
+
+
+.contact .right form .field,
+.contact .right form .fields .field{
+    height: 45px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.contact .right form .field input,
+.contact .right form #textarea textarea{
+    height: 100%;
+    width: 100%;
+    border: 2px solid lightblue;
+    box-shadow: 4px 3px 0px 0px lightblue;
+    border-radius: 6px;
+    outline: none;
+    padding: 0 15px;
+    font-size: 17px;
+    font-family: 'poppins', sans-serif;
+}
+
+.contact .right form #textarea textarea{
+    padding-top: 10px;
+    resize: none;
+}
+.contact .right form #btn{
+    height: 47px;
+    width: 100%;
+}
+.contact .right form #btn button {
+    width: 170px;
+    height:100%;
+    font-size: 17px;
+    font-family: 'poppins',sans-serif;
+    background:  #14eddbe1;
+    color: #111;
+    border: 2px solid #14eddbe1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact .right form #btn button:hover{
+    color: #fff;
+    background: none;
+    box-shadow:-2px 3px 6px 0px aqua;
+}
+
+/* social section starts here */
+.social ul{
+    list-style-type: none;
+    /* background: #B8FFF9; */
+    color: #fff;
+     margin-left: 35%;
+
+}
+.social ul li{
+   align-items: center;
+    display: inline-block;
+    padding: 1%;
+   
+}
+
+
+/* footer section styling */
+footer{
+    background: #B8FFF9;
+    padding: 20px 23px;
+    color: #111;
+    text-align: center;
+}
+
+footer #footer a{
+    color: rgb(255, 0, 255);
+}
+
+
+
+
+/* Responsive media query start */
+@media (max-width: 1330px) {
+    .home .max-width {
+        margin-left:  0px;
+    }
+
+}
+@media (max-width: 1104px) {
+    .about .about-content .left img{
+        height: 400px;
+        width: 350px;
+      
+    }
+    
+}
+
+
+@media (max-width: 991px) {
+.max-width{
+    padding: 0 50px;
+}
+
+
+}
+@media (max-width: 947px) {
+    .max-width {
+        padding: 0 50px;
+    }
+    .menu-btn{
+        display: block;
+        z-index: 999;
+    }
+    .menu-btn i.active:before{
+        content: "\f00d";
+    }
+    .navbar .menu{
+        position: fixed;
+        height: 100vh;
+        width: 100%;
+        left: -100%;
+        top: 0;
+        background: #111;
+        text-align: center;
+        padding-top: 80px;
+        transition: all 0.3s ease;
+    }
+    .navbar .menu.active{
+        left: 0;
+    }
+    .navbar .menu li{
+        display:block;
+        
+    }
+    .navbar .menu li a{
+        display: inline-block;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+    .home .home-content .text-2 {
+        font-size: 70px;
+       
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 35px;
+       
+    }
+    .home .home-content a{
+    font-size: 23px;
+    padding: 6px 28px;
+    }
+    
+    .max-width{
+        max-width: 800px;
+    }
+    .about .about-content .column{
+        width: 50%;
+    }
+
+     .home .home-content .right{
+        display: none;
+    }
+ 
+    .home .home-content .right img{
+        display: none;
+    }
+    .about .about-content .left{
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 60px;
+    }
+    .about .about-content .right{
+        flex: 100%;
+    }
+    .edu .edu-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 20px;
+    }
+    .skills .skills-content .column,
+    .contact .contact-content .column{
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+
+@media (max-width: 690px) {
+    .max-width{
+        padding: 0 23px;
+    }
+
+    .home .home-content .text-2 {
+        font-size: 60px;
+       
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 30px;
+       
+    }
+    .home .home-content a{
+        font-size: 20px;
+        padding: 5px 26px;
+    }
+    .edu .edu-content .card,
+    .skills .skills-content .column{
+        width: 100%
+    }
+}
+
+@media (max-width: 500px) {
+   
+
+    .home .home-content .text-2 {
+        font-size: 50px;
+       
+    }
+    
+    .home .home-content .text-3 {
+        font-size: 25px;
+       
+    }
+    .project .project-content .box-1{
+        width: 100%;
+    }
+    .project .project-content .box-1 .pic{
+        width: 100%;
+        margin: 0;
+        top: 0;
+        bottom: 0;
+    }
+}
